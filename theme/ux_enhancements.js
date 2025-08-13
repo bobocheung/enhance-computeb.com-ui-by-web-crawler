@@ -1,6 +1,10 @@
 // Progressive, safe UI enhancements
 (function(){
-	try{
+    try{
+        // add route-specific classes for scoped styling
+        const path = decodeURI(location.pathname);
+        if (path.includes('/自選砌機')) document.body.classList.add('route-build');
+        if (path.includes('/腦細List')) document.body.classList.add('route-list');
 		// 1) AppBar shadow on scroll
 		const appBar = document.querySelector('.MuiAppBar-root');
 		if (appBar) {
