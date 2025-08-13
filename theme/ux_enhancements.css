@@ -1,0 +1,38 @@
+/* Low-risk UI enhancements (progressive, non-destructive) */
+
+/* 1) AppBar shadow only after scroll */
+.MuiAppBar-root.is-scrolled { box-shadow: 0 8px 18px rgba(0,0,0,.12) !important; }
+
+/* 2) Current nav link highlight */
+nav a[aria-current="page"] .MuiButton-root { background: #eef6ff !important; }
+
+/* 3) Focus visibility for a11y */
+a:focus-visible, button:focus-visible, .MuiButton-root:focus-visible {
+  outline: 3px dashed #1e88e5; outline-offset: 3px; border-radius: 10px;
+}
+
+/* 4) Constrain reading width without layout break */
+#root > div { max-width: 1200px; margin: 0 auto; padding: 0 16px; }
+
+/* 5) Media safety */
+img, iframe { max-width: 100%; height: auto; }
+
+/* 6) Dense grids readability (spacing only, do not change button size) */
+.MuiGrid-container { gap: 10px !important; }
+
+/* 7) Mobile hit area - keep minimal to avoid size drift */
+@media (max-width: 600px) {
+  .MuiButton-root { padding: 8px 12px !important; }
+}
+
+/* 8) Dark mode polish (without changing brand colors aggressively) */
+@media (prefers-color-scheme: dark) {
+  body { background: #0e0e0f; color: #eaeaea; }
+  .MuiPaper-root { background: #161616 !important; color: #eaeaea !important; }
+}
+
+/* 9) Skip link */
+.skip-link { position: absolute; left: -9999px; top: 0; }
+.skip-link:focus { left: 16px; top: 12px; background:#fff; padding:8px 12px; border:2px solid #000; z-index: 10000; }
+
+

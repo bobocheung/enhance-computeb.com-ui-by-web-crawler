@@ -1,0 +1,26 @@
+{
+  "name": "project10",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scrape": "node scrape.js",
+    "post:fix": "node scripts/postprocess.js",
+    "prerender:strict": "node scripts/prerender_strict.js",
+    "theme:inject": "node scripts/inject_theme.js",
+    "refresh": "npm run scrape && npm run post:fix && npm run theme:inject",
+    "redesign": "node scripts/redesign.js",
+    "export:clean": "node scripts/export_clean.js",
+    "export:clean-plus": "node scripts/export_clean_plus.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cheerio": "^1.1.2",
+    "puppeteer": "^24.16.1",
+    "website-scraper": "^5.3.1",
+    "website-scraper-puppeteer": "^1.1.0"
+  }
+}
