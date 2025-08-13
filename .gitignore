@@ -1,0 +1,13 @@
+node_modules/
+static_site/**
+static_site_prerendered/**
+static_site_clean/**
+static_site_clean_plus/**
+static_site_redesigned/**
+.DS_Store
+Thumbs.db
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+
