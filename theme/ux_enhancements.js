@@ -15,6 +15,10 @@
 			if (location.pathname.includes(href)) a.setAttribute('aria-current', 'page');
 		});
 
+		// Ensure filter buttons align side‑by‑side if container allows
+		const filters = document.querySelectorAll('.MuiButton-root');
+		filters.forEach(b=>{ b.style.whiteSpace='nowrap'; });
+
 		// 3) Lazy images - keep layout, avoid reflow
 		document.querySelectorAll('img:not([loading])').forEach(img => {
 			img.loading = 'lazy';

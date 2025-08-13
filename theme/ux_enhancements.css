@@ -20,6 +20,13 @@ img, iframe { max-width: 100%; height: auto; }
 /* 6) Dense grids readability (spacing only, do not change button size) */
 .MuiGrid-container { gap: 10px !important; }
 
+/* Force chips grid to line up in rows without wrapping unevenly */
+.MuiGrid-container{ display:grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
+
+/* Prevent info buttons from covering text in list rows */
+[class*="MuiListItem-root"], [role="listitem"]{ padding-right: 72px; }
+[class*="MuiListItemSecondaryAction-root"]{ position: static !important; margin-left: auto; }
+
 /* 7) Mobile hit area - keep minimal to avoid size drift */
 @media (max-width: 600px) {
   .MuiButton-root { padding: 8px 12px !important; }
