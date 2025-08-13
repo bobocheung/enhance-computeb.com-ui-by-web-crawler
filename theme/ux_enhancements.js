@@ -5,6 +5,8 @@
         const path = decodeURI(location.pathname);
         if (path.includes('/自選砌機')) document.body.classList.add('route-build');
         if (path.includes('/腦細List')) document.body.classList.add('route-list');
+        if (path.endsWith('/') || path.includes('/主頁')) document.body.classList.add('route-home');
+        if (path.includes('/About%20Us') || path.includes('/About Us')) document.body.classList.add('route-about');
 		// 1) AppBar shadow on scroll
 		const appBar = document.querySelector('.MuiAppBar-root');
 		if (appBar) {

@@ -33,6 +33,28 @@ body.route-build [class*="MuiListItem-root"],
 body.route-build [role="listitem"]{ padding-right: 72px; }
 body.route-build [class*="MuiListItemSecondaryAction-root"]{ position: static !important; margin-left: auto; }
 
+/* --- Home specific --- */
+body.route-home .carousel .carousel-item img{
+  object-fit: cover; height: clamp(220px, 28vw, 420px);
+}
+body.route-home #root > .App > .MuiBox-root.css-1qq679y{ max-width:1200px; margin:0 auto; padding:0 16px; }
+
+/* --- Build (自選砌機) specific --- */
+body.route-build .MuiButtonGroup-root .MuiButton-root{ white-space:nowrap; }
+@media (max-width:480px){
+  body.route-build .MuiButtonGroup-root{ grid-template-columns:1fr; display:grid; gap:8px; }
+}
+
+/* --- List (腦細List) specific --- */
+body.route-list .MuiTypography-body1{ line-height:1.6; }
+body.route-list p.MuiTypography-body1{ margin: 0 0 12px; }
+body.route-list .MuiTypography-body1.css-39c99c{ position: sticky; top: 72px; background: var(--hd-bg); z-index: 2; padding: 4px 0; }
+
+/* --- About specific --- */
+body.route-about .MuiBox-root.css-1l0z8uk{ display:grid; grid-template-columns: 1.2fr 1fr; gap:16px; }
+@media (max-width: 992px){ body.route-about .MuiBox-root.css-1l0z8uk{ grid-template-columns: 1fr; } }
+body.route-about iframe{ border-radius:12px; }
+
 /* 7) Mobile hit area - keep minimal to avoid size drift */
 @media (max-width: 600px) {
   .MuiButton-root { padding: 8px 12px !important; }
